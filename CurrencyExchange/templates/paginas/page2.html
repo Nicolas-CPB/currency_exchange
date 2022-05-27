@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            list-style: none;
+        }
+        
+        body {
+            background-color: rgb(75, 184, 208);
+        }
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            flex-wrap: wrap;
+            background-color: rgb(99, 220, 247);
+            color: black;
+        }
+        
+        .navitems {
+            display: flex;
+            transition: 0.4s;
+        }
+        
+        .navitems li {
+            margin: 20px;
+        }
+        
+        .navitems li a {
+            display: block;
+            padding: 10px;
+        }
+        
+        main {
+            display: flex;
+            justify-content: center;
+        }
+        
+        section {
+            margin-top: 160px;
+            width: 450px;
+            height: 450px;
+            background-color: white;
+            border-radius: 10px 60px 10px 60px;
+        
+        }
+        
+        h1 {
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        input {
+            width: 250px;
+            height: 30px;
+            margin-top: 25px;
+            margin-left: 25px;
+            outline: none;
+            border: none;
+            border-bottom: 2px solid rgb(247, 247, 247);
+        }
+        
+        input:focus {
+            border-bottom: 2px solid rgb(75, 184, 208);
+        }
+        
+        input:focus::placeholder {
+            transform: translateY(-100%) translateX(4px);
+            
+            font-size: 0.7em;
+        }
+        
+        input::placeholder {
+            transition-duration: 0.15s;
+        }
+        
+        #salvar_senha {
+            width: 15px;
+            height: 15px;
+        }
+        
+        span a {
+            text-decoration: none;
+            color: black;
+            margin-left: 120px;
+        }
+        
+        button {
+            width: 400px;
+            height: 45px;
+            margin-top: 45px;
+            margin-left: 25px;
+            background-color: rgb(75, 184, 208);
+            color: white;
+            border: none;
+            border-radius: 8px;
+        }
+        
+        .hamburguer_icon {
+            display: none;
+        }
+        
+        #teste:checked~.navitems {
+            left: 0;
+        }
+        
+        header input {
+            display: none;
+        }
+        
+        select {
+            width: 250px;
+            height: 30px;
+            margin-top: 25px;
+            margin-left: 25px;
+            outline: none;
+            border: none;
+            border-bottom: 2px solid rgb(247, 247, 247);
+        }
+        
+        select:focus {
+            border-bottom: 2px solid rgb(75, 184, 208);
+        }
+        
+        select:focus::placeholder {
+            transform: translateY(-100%) translateX(4px);
+            
+            font-size: 0.7em;
+        }
+        
+        select::placeholder {
+            transition-duration: 0.15s;
+        }
+
+        span {
+            margin-left: 24px;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <h1>O resultado é:</h1>
+            <h1>{{response.result}}   {{response.query.to}}</h1>
+        </section>
+    </main>
+</body>
+</html>
